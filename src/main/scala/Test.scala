@@ -49,8 +49,8 @@ object Test extends App{
     case Failure(e) => println(s"error ${e.getLocalizedMessage}")
   }
 
-  val doneDie = Future {
+  val dontDie = Future {
     Thread.sleep(10000)
   }
-  Await.result(doneDie, Duration.Inf)
+  Await.result(dontDie, Duration.Inf)
 }
